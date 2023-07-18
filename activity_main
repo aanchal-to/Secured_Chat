@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+ xmlns:app="http://schemas.android.com/apk/res-auto"
+ xmlns:tools="http://schemas.android.com/tools"
+ android:layout_width="match_parent"
+ android:layout_height="match_parent"
+ tools:context="com.example.secured_chat.MainActivity">
+ <LinearLayout
+ android:id="@+id/heading"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:layout_marginTop="20dp"
+ android:layout_marginBottom="20dp">
+ <ImageView
+ android:layout_width="80dp"
+ android:layout_height="match_parent"
+ android:layout_weight="1"
+ app:srcCompat="@drawable/googleg_standard_color_18"
+ android:layout_marginLeft="60dp"/>
+ <TextView
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:layout_weight="2"
+ android:gravity="left"
+ android:text="CyberSecurity"
+ android:textSize="30dp"
+ android:layout_marginLeft="10dp"/>
+ </LinearLayout>
+ <ListView
+ android:id="@+id/listView"
+ android:layout_width="match_parent"
+ android:layout_height="500dp"
+ android:layout_below="@id/heading" />
+ <LinearLayout
+ android:layout_width="match_parent"
+ android:layout_height="143dp"
+ android:layout_below="@id/listView"
+ android:layout_alignParentBottom="true"
+ android:layout_marginTop="-2dp"
+ android:layout_marginBottom="10dp"
+ android:gravity="bottom"
+ android:orientation="horizontal">
+ <EditText
+ android:id="@+id/editText"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:layout_marginStart="10dp"
+ android:layout_weight="1"
+ android:autofillHints=""
+ android:ems="10"
+ android:gravity="start|top"
+ android:hint="Type your message"
+ android:inputType="textMultiLine" />
+ <Button
+ android:id="@+id/button"
+ android:layout_width="match_parent"
+ android:layout_height="wrap_content"
+ android:layout_weight="2"
+ android:onClick="sendButton"
+ android:text="send" />
+ </LinearLayout>
+</RelativeLayout>
